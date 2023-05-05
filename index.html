@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- declaração de tipo de documento HTML -->
+<html> <!-- elemento raiz do documento HTML -->
+
+<head> <!-- cabeçalho do documento -->
+  <title>Identificador de Imagens</title> <!-- título da página exibido na guia do navegador -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- metadados para definir o tamanho da exibição no dispositivo -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!-- link para importar uma folha de estilo CSS do Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- link para importar o jQuery -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- link para importar o JavaScript do Bootstrap -->
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <!-- link para importar a biblioteca de aprendizado de máquina ml5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  <!-- link para importar a biblioteca webcam.js -->
+  <link rel="stylesheet" href="style.css"> <!-- link para importar uma folha de estilo personalizada -->
+</head>
+
+<body> <!-- corpo do documento -->
+  <div class="container"> <!-- elemento div com classe container para estruturar o conteúdo -->
+    <center> <!-- alinhamento do conteúdo no centro -->
+      <h3 class="btn btn-primary" >IDENTIFICADOR DE IMAGENS</h3> <!-- cabeçalho principal da página -->
+      <br><br><br> <!-- quebra de linha -->
+      <p style="font-size: 20px; color: rgb(212, 41, 121);">O modelo foi treinado para identificar estes objetos: </p> <!-- parágrafo de texto -->
+      <br><br>
+      <b class="name_of_objects"> <!-- texto em negrito com classe name_of_objects -->
+        Óculos <!-- item a ser identificado -->
+        <br> <br>
+        Caderno <!-- item a ser identificado -->
+        <br> <br>
+        Lápis <!-- item a ser identificado -->
+        <br> <br>
+        Copo <!-- item a ser identificado -->
+        <br> <br>
+        Caneta <!-- item a ser identificado -->
+        <br><br> <br>
+      </b>
+      <label style="color: rgb(216, 15, 15);">Visualização da webcam - </label> <!-- rótulo para a visualização da webcam -->
+      <div id="camera"></div> <!-- elemento div com ID camera para mostrar a visualização da webcam -->
+      <br><br> <!-- quebra de linha -->
+      <div id="result"></div> <!-- elemento div com ID result para mostrar o resultado da identificação -->
+      <br> <!-- quebra de linha -->
+      <button style="background-color: rgb(212, 41, 121);" onclick="take_snapshot();" class="btn btn-info">Capturar Imagem</button>
+      <!-- botão para capturar imagem da webcam -->
+      <br><br> <!-- quebra de linha -->
+      <button style="background-color: rgb(115, 16, 155);" onclick="check();" class="btn btn-success">Identificar Imagem</button>
+      <!-- botão para identificar a imagem capturada -->
+      <br><br> <!-- quebra de linha -->
+      <p style="font-size: 20px; color: rgb(226, 67, 160);">Objeto : <span id="result_object_name"></span> </p> <!-- parágrafo de texto com ID result_object-->
+  
+        
+        <p style="font-size: 20px; color: blueviolet;">Precisão : <span id="result_object_accuracy"></span> </p>
+      </center>
+  
+    </div>
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
+  
+   
+  
